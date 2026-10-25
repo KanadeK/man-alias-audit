@@ -267,8 +267,9 @@ class AuditTests(Fixture):
 
 
 ZSOELIM = shutil.which('zsoelim')
-if not ZSOELIM and Path('/usr/lib/man-db/zsoelim').is_file():
-    ZSOELIM = '/usr/lib/man-db/zsoelim'
+for location in ['/usr/libexec/man-db/zsoelim', '/usr/lib/man-db/zsoelim']:
+    if not ZSOELIM and Path(location).is_file():
+        ZSOELIM = location
 
 
 @unittest.skipUnless(ZSOELIM, 'native man-db zsoelim unavailable')
