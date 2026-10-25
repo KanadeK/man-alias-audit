@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a reproducible defect
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal input and command
+      description: Remove private data before attaching examples.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: OS, runtime and tool version

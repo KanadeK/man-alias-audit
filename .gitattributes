@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.inv binary
+*.gz binary
+*.xz binary
+*.bz2 binary
